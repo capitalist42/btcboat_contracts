@@ -207,25 +207,3 @@ for this smart contract too.
 For example,
 [`0xd26a59de92833cba90483eceb50c5728d5ef13bf`](https://explorer.testnet.rsk.co/address/0xd26a59de92833cba90483eceb50c5728d5ef13bf?__ctab=Code).
 
-(10) Congratulations!
-You have got live smart contracts on RSK!
-🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉
-
-## Next steps
-
-Here are some ideas:
-
-- Change the smart contracts to do something specific to what you want
-- Add more tests
-- Improve code coverage
-- Lint code
-- Self-audit for security issues
-- Implement a front-end client application to talk to your DApps
-
-## Author
-
-[Brendan Graetz](https://bguiz.com/)
-
-## Licence
-
-GPL-3.0
