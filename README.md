@@ -1,4 +1,4 @@
-# Heaven's Door Contracts
+# BTCBoat Contracts
 
 ## Get started
 
@@ -15,7 +15,7 @@ git clone
 Start in the repo:
 
 ```shell
-cd heavens_door_contracts
+cd btcboat_contracts
 yarn
 ```
 
