@@ -1,7 +1,7 @@
 import hre from 'hardhat';
 import fs from 'fs';
 
-const ADDRESSES_FILE = 'contract_adressess.json';
+const CONTRACT_ADDRESSES_FILE = 'contract_adressess.json';
  interface ContractAddresses {
   Penalizer: string,
   RelayHub: string,
@@ -74,7 +74,7 @@ const deployContracts = async(): Promise<ContractAddresses> => {
 
 const writeToContractAddressConfigFile = (chainId: bigint, contractAddresses: ContractAddresses) => {
   const data = JSON.stringify({[`${chainId}`]: contractAddresses});
-  fs.writeFileSync(ADDRESSES_FILE, data);
+  fs.writeFileSync(CONTRACT_ADDRESSES_FILE, data);
 };
 
 async function main() {

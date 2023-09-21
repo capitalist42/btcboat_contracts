@@ -1,0 +1,10 @@
+{
+    "31": {
+        "Penalizer": "0x8b48Db5fFb31faAFa12f586dB5a0e38B1476ad32",
+        "RelayHub": "0xfFe9b69a69980348a9dE05baC6727850a6992600",
+        "IndividualAccountFactory": "0xA468eD39Bf29c5D6f5a44D40380a8E401424Cc20",
+        "IndividualAccountDeployVerifier": "0xf6C5f52fb88253d5865fc0a6b9215aBD46c50588",
+        "IndividualAccountRelayVerifier": "0xEF7ADE61E904937187d1fC9D57A341c048337f2B",
+        "VersionRegistry": "0x557F7ded12c70e91ea81B36995eB7Dd6e5d1210e"
+    }
+}

@@ -7,6 +7,10 @@ import '@nomicfoundation/hardhat-chai-matchers';
 import 'hardhat-watcher';
 import 'solidity-coverage';
 
+
+import { acceptTokens } from './tasks/AcceptTokens';
+import { HardhatRuntimeEnvironment } from 'hardhat/types';
+
 // import { HardhatEthersHelpers } from '@nomicfoundation/hardhat-ethers/types/index.js';
 
 
@@ -95,12 +99,6 @@ const rskTestnetNetworkConfig =
   };
 
 
-// task('deploy-relay-system-contracts', 'Deploy Relay System contracts to selected network').setAction(
-//   async (_, hre: HardhatEthersHelpers) => {  
-//     await deployRelaySystemContracts(hre)
-//   }
-// )
-
 const watcherConfig = {
   compilation: {
     tasks: ['compile'],
@@ -108,6 +106,14 @@ const watcherConfig = {
     verbose: true,
   },
 }
+
+
+task('accept-tokens', 'Accpets a list of tokens')
+  .addPositionalParam('tokenlist', 'list of tokens')
+  .setAction(async (taskArgs: { tokenlist: string }, hre: HardhatRuntimeEnvironment) => {
+    await acceptTokens(taskArgs, hre);
+  });
+
 
 const config: HardhatUserConfig = {
   solidity: {
