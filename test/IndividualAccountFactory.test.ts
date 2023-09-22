@@ -368,7 +368,7 @@ describe('IndividualAccountFactory', () => {
             signature,
           ),
       ).to.be.rejectedWith(
-        'IndividualAccountFactory: relayedUserSmartWalletCreation expect relayHub to be caller',
+        'IndividualAccountFactory: expect relayHub to be caller',
       );
     });
 
@@ -625,7 +625,7 @@ describe('IndividualAccountFactory', () => {
             feesReceiverAddress,
             signature,
           ),
-      ).to.be.rejectedWith('IndividualAccountFactory: Invalid Signature');
+      ).to.be.rejectedWith('IndividualAccountFactory: invalid signature');
       // const ownerBalanceAtT1 = await hre.ethers.provider.getBalance(owner.address);
       expect(await individualAccount.getDeployedCode()).to.not.be.exist;
     });
