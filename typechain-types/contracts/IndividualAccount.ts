@@ -68,7 +68,6 @@ export declare namespace IForwarder {
 export interface IndividualAccountInterface extends Interface {
   getFunction(
     nameOrSignature:
-      | "DATA_VERSION_HASH"
       | "directExecute(address,bytes)"
       | "directExecute(address,uint256,bytes)"
       | "eip712Domain"
@@ -84,10 +83,6 @@ export interface IndividualAccountInterface extends Interface {
 
   getEvent(nameOrSignatureOrTopic: "EIP712DomainChanged"): EventFragment;
 
-  encodeFunctionData(
-    functionFragment: "DATA_VERSION_HASH",
-    values?: undefined
-  ): string;
   encodeFunctionData(
     functionFragment: "directExecute(address,bytes)",
     values: [AddressLike, BytesLike]
@@ -134,10 +129,6 @@ export interface IndividualAccountInterface extends Interface {
     values: [IForwarder.ForwardRequestStruct, BytesLike, BytesLike]
   ): string;
 
-  decodeFunctionResult(
-    functionFragment: "DATA_VERSION_HASH",
-    data: BytesLike
-  ): Result;
   decodeFunctionResult(
     functionFragment: "directExecute(address,bytes)",
     data: BytesLike
@@ -221,8 +212,6 @@ export interface IndividualAccount extends BaseContract {
   removeAllListeners<TCEvent extends TypedContractEvent>(
     event?: TCEvent
   ): Promise<this>;
-
-  DATA_VERSION_HASH: TypedContractMethod<[], [string], "view">;
 
   "directExecute(address,bytes)": TypedContractMethod<
     [to: AddressLike, data: BytesLike],
@@ -318,9 +307,6 @@ export interface IndividualAccount extends BaseContract {
     key: string | FunctionFragment
   ): T;
 
-  getFunction(
-    nameOrSignature: "DATA_VERSION_HASH"
-  ): TypedContractMethod<[], [string], "view">;
   getFunction(
     nameOrSignature: "directExecute(address,bytes)"
   ): TypedContractMethod<
