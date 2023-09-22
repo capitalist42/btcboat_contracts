@@ -32,7 +32,7 @@ async function main() {
   
   main()
   .then(() => {
-    console.log("Deploy Script Complete.")
+    console.log("getIndividualAccountFactoryMasterCopy Script Complete.")
   })
   .catch((error) => {
     console.error(error);
