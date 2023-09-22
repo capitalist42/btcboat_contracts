@@ -232,7 +232,7 @@ describe('IndividualAccountFactory', () => {
             signature,
           );
       await expect(theCreateUserSmartWalletContractCall).to.be.revertedWith(
-        'IndividualAccountFactory: Invalid Signature',
+        'IndividualAccountFactory: invalid signature',
       );
 
       expect(await individualAccount.getDeployedCode()).to.not.be.exist;

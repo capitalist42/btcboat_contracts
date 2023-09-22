@@ -103,7 +103,7 @@ contract IndividualAccountFactory is EIP712, ISmartWalletFactory {
                 index,
                 signature
             ),
-            'IndividualAccountFactory: Invalid Signature'
+            'IndividualAccountFactory: invalid signature'
         );
         // deploy the individual account with creation bytecode, a pinch of salt and initdata
         //  a6b63eb8  =>  initialize(address owner,address tokenAddr,address tokenRecipient,uint256 tokenAmount,uint256 tokenGas)

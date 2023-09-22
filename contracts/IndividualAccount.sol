@@ -26,7 +26,7 @@ contract IndividualAccount is EIP712, IForwarder {
     constructor() EIP712('RSK Enveloping Transaction', '2') {
         _setOwner(msg.sender);
     }
-    
+
     // /**
     //  * This Proxy will first charge for the deployment and then it will pass the
     //  * initialization scope to the wallet logic.
@@ -179,10 +179,12 @@ contract IndividualAccount is EIP712, IForwarder {
         }
     }
 
-    function directExecute(
-        address to,
-        bytes calldata data
-    ) external payable override returns (bool success, bytes memory ret) {
+    function directExecute(address to, bytes calldata data)
+        external
+        payable
+        override
+        returns (bool success, bytes memory ret)
+    {
         //Verify Owner
         require(
             getOwner() == keccak256(abi.encodePacked(msg.sender)),
@@ -347,7 +349,6 @@ contract IndividualAccount is EIP712, IForwarder {
 
     /* solhint-disable no-empty-blocks */
     receive() external payable {}
-
 
     function verify(
         bytes32 suffixData,
