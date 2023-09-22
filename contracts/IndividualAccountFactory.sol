@@ -22,9 +22,7 @@ contract IndividualAccountFactory is EIP712, ISmartWalletFactory {
     // nonces of addresses, used for replay protection of signatures
     mapping(address => uint256) private nonces;
 
-    constructor()
-        EIP712('IndividualAccountFactory Enveloping Transaction', '1')
-    {
+    constructor() EIP712('RSK Enveloping Transaction', '2') {
         individualAccountImplementation = new IndividualAccount();
         masterCopy = address(individualAccountImplementation);
     }

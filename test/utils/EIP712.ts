@@ -78,8 +78,8 @@ interface Types extends MessageTypes {
 // use these values in registerDomainSeparator
 export const domainSeparatorType = {
   prefix: 'string name,string version',
-  name: 'IndividualAccountFactory Enveloping Transaction',
-  version: '1',
+  name: 'RSK Enveloping Transaction',
+  version: '2',
 };
 
 type Domain = {

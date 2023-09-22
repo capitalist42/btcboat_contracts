@@ -18,13 +18,12 @@ contract IndividualAccount is EIP712, IForwarder {
     bytes32 private constant _OWNER_SLOT =
         0xa7b53796fd2d99cb1f5ae019b54f9e024446c3d12b483f733ccc62ed04eb126a;
     using ECDSA for bytes32;
-    bytes32 public constant DATA_VERSION_HASH = keccak256('2');
 
     uint256 public override nonce;
 
     // bytes32 public domainSeparator;
 
-    constructor() EIP712('IndividualAccount Enveloping Transaction', '1') {
+    constructor() EIP712('RSK Enveloping Transaction', '2') {
         _setOwner(msg.sender);
     }
     
